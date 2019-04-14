@@ -13,7 +13,7 @@ def open_and_read_file(file_path):
     the file's contents as one string of text.
     """
 
-    open_file = open(file_path, encoding='utf-8')
+    open_file = open(file_path)
     return open_file.read()
 
 
@@ -80,22 +80,23 @@ def random_tweet(random_text):
     find_captials = random_text.split()
     result = []
     i = None
+    j = None
+    separator = ' '
     punk = ['.', '!']
 
     for word in find_captials:
         if word[0].isupper():
             i = find_captials.index(word)
-            result.append(word)
-            print(result)
+            result = find_captials[i:i+45]
             break
     
-    print(find_captials[i:i+30])
+    print(separator.join(result))
             
 
 
 
 
-input_path = ("ambitions.txt", encoding='utf-8')
+input_path = "ambitions.txt"
 
 # Open the file and turn it into one long string
 input_text = open_and_read_file(input_path)
