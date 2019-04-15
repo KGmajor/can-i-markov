@@ -1,4 +1,7 @@
 import tweepy 
+import os
+
+TWITTER_KEY = os.environ["TWITTER_KEY"]
   
 # personal information 
 consumer_key ="xxxxxxxxxxxxxxxx"
